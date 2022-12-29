@@ -32,6 +32,9 @@ function nextSequence() {
 }
 
 $(".btn").click(function(){
+    if( gameStart == 0 || gameStart == -1) {
+        return;
+    }
     var userChosenColour = this.id;
     userClickedPattern.push(userChosenColour);
     checkAnswer(userClickedPattern.length);
